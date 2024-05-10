@@ -1,0 +1,64 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$link-decoration: none;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+// 4. Include any default map overrides here
+$custom-colors: (
+	"farve": $cyan-400,
+	"icon-color": #D9BF98,
+	"body-font-color": #23201D,
+	"background-color": #FAF9F6
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "bootstrapComponents";
+
+$tablet: "screen and (min-width: 768px)";
+
+// 5. Du kan lave styling her...
+
+body{
+	font-family: "Lexend Deca";
+	font-size: 12px;
+	color: var(--bs-body-font-color);
+	background-color: var(--bs-background-color);
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: "Gopher";
+	color: var(--bs-body-font-color);
+}
+
+#navbarNavDropdown li{
+	font-family: Gopher;
+	font-size: 1rem;
+	color: var(--bs-body-font-color);
+}
+
+#Logo{
+	width: 120px;
+	height: auto;
+	margin-left: 10px;
+	@media #{$tablet}{
+		margin-left: 30px;
+		width: 150px;
+		height: auto;
+
+	}
+}
+
+#FooterPic {
+	background-image: url("../images/Footer.webp");
+	background-size: cover;
+	background-position: center;
+	background-position-x: 75%;
+	background-repeat: no-repeat;
+	padding: 2rem;
+}
