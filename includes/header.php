@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-background-color">
+<nav role="navigation" class="navbar navbar-expand-lg bg-background-color">
     <div class="container-fluid align-items-end">
         <a class="navbar-brand" href="index.php">
             <img src="images/Klippegården_Logo.webp" alt="Klippegårdens logo" id="Logo">
@@ -16,7 +16,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Om</a>
+                    <a class="nav-link" href="om.php">Om</a>
                 </li>
 
 
@@ -39,7 +39,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Kontakt</a>
+                    <a class="nav-link" href="kontakt.php">Kontakt</a>
                 </li>
 
                 <li class="nav-item">

@@ -13,7 +13,9 @@ $custom-colors: (
 	"farve": $cyan-400,
 	"icon-color": #D9BF98,
 	"body-font-color": #23201D,
-	"background-color": #FAF9F6
+	"background-color": #FAF9F6,
+	"banner-color": #F0E5D5,
+	"btn-color": #E1D981
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
@@ -53,6 +55,13 @@ h1,h2,h3,h4,h5,h6{
 
 	}
 }
+
+
+.btn{
+	font-family: Gopher;
+}
+
+
 
 #FooterPic {
 	background-image: url("../images/Footer.webp");
