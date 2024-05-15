@@ -1,50 +1,57 @@
-<nav role="navigation" class="navbar navbar-expand-lg bg-background-color">
+<nav role="navigation" class="navbar navbar-expand-lg">
     <div class="container-fluid align-items-end">
         <a class="navbar-brand" href="index.php">
             <img src="images/Klippegården_Logo.webp" alt="Klippegårdens logo" id="Logo">
 
 
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav w-100 gap-4 me-4">
                 <li class="nav-item flex-grow-1 d-none d-md-block"></li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.php">Forside</a>
-                </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="om.php">Om</a>
-                </li>
+                <?php
+                $current_page = basename($_SERVER['PHP_SELF']);
 
+                $navigation_links = array(
+                    'index.php' => 'Forside',
+                    'om.php' => 'Om',
+                    'behandlinger.php' => 'Behandlinger',
+                    'index.php#Galleri' => 'Galleri',
+                    'kontakt.php' => 'Kontakt',
+                    '#' => 'Booking'
+                );
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Behandlinger
-                    </a>
-                    <ul class="dropdown-menu border-0 shadow-sm bg-background-color">
-                        <li><a class="dropdown-item" href="#">Klipninger</a></li>
-                        <li><a class="dropdown-item" href="#">Farvninger</a></li>
-                        <li><a class="dropdown-item" href="#">Permanent</a></li>
-                        <li><a class="dropdown-item" href="#">Kur/Behandlinger</a></li>
-                        <li><a class="dropdown-item" href="#">Håropsætning</a></li>
-                        <li><a class="dropdown-item" href="#">Bryn & Vipper</a></li>
-                    </ul>
-                </li>
+                foreach ($navigation_links as $url => $text) {
 
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Galleri</a>
-                </li>
+                    $active_class = '';
+                    if($current_page === $url) {
+                        $active_class = 'active';
+                    }
+                    if ($url === 'behandlinger.php') {
+                        echo '<li class="nav-item dropdown">';
+                        echo '<a class="nav-link d-inline-block ' . $active_class . '" href="' . $url . '">' . $text . '</a>';
+                        echo '<a class="nav-link p-0 ms-2 ms-md-0 dropdown-toggle d-inline-block" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>';
+                        echo '<ul class="dropdown-menu border-0 shadow-sm bg-background-color">';
 
-                <li class="nav-item">
-                    <a class="nav-link" href="kontakt.php">Kontakt</a>
-                </li>
+                        echo '<li><a class="dropdown-item" href="behandlinger.php#Klipninger">Klipninger</a></li>';
+                        echo '<li><a class="dropdown-item" href="behandlinger.php#Farvning">Farvninger</a></li>';
+                        echo '<li><a class="dropdown-item" href="behandlinger.php#Permanent">Permanent</a></li>';
+                        echo '<li><a class="dropdown-item" href="behandlinger.php#KurBehandling">Kur/Behandlinger</a></li>';
+                        echo '<li><a class="dropdown-item" href="behandlinger.php#Håropsætning">Håropsætning</a></li>';
+                        echo '<li><a class="dropdown-item" href="behandlinger.php#BrynVipper">Bryn & Vipper</a></li>';
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Booking</a>
-                </li>
+                        echo '</ul>';
+                        echo '</li>';
+                    } else {
+                        echo '<li class="nav-item">';
+                        echo '<a class="nav-link ' . $active_class . '" href="' . $url . '">' . $text . '</a>';
+                        echo '</li>';
+                    }
+                }
+                ?>
             </ul>
         </div>
     </div>

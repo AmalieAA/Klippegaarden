@@ -1,6 +1,6 @@
-<footer>
+<footer class="mt-5">
 
-    <div id="FooterPic"">
+    <div id="FooterPic">
 
         <div class="m-md-4">
             <div>
@@ -51,6 +51,17 @@
 
             </div>
         </div>
+
+        <div class="col-12 text-center copyright-icon">
+            <p class="mb-0">
+                Copyright
+                <i class="fa-regular fa-copyright"></i>
+                Alle rettigheder forbeholdes
+            </p>
+
+        </div>
+
+
     </div>
 
 </footer>

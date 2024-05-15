@@ -9,8 +9,9 @@
 	<meta name="robots" content="All">
 	<meta name="author" content="Udgiver">
 	<meta name="copyright" content="Information om copyright">
-	
-	<link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <link rel="icon" type="image/x-icon" href="images/Favikon.webp">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,23 +23,31 @@
 
 <body>
 
-<?php include "includes/header.php";?>
-
-    <div>
+    <div class="banner-image-container">
+        <?php include "includes/header.php";?>
         <img class="img-fluid" src="images/Forside_cover.webp" alt="Forside billede af en kunde">
+        <div class="banner-image_text">
+            <h1>
+                Professionelle<br/>
+                behandlinger i<br/>
+                hyggelige omgivelser
+            </h1>
+            <a href="#" class="btn btn-btn-color" role="button">Book din næste aftale </a>
+        </div>
     </div>
 
+<main class="container-fluid">
 
-    <div>
+    <div class="my-5">
         <h2 class="text-center">
             Hvorfor vælge os?
         </h2>
     </div>
 
-    <div class="row">
+    <div class="row my-5">
 
-        <div class="col-12 col-md-4">
-            <h3>
+        <div class="col-12 col-md-4 p-2">
+            <h3 class="text-center">
                 4-årig uddannelse
             </h3>
 
@@ -47,8 +56,8 @@
             </p>
         </div>
 
-        <div class="col-12 col-md-4">
-            <h3>
+        <div class="col-12 col-md-4 p-2">
+            <h3 class="text-center">
                 Afslappende atmosfære
             </h3>
 
@@ -57,8 +66,8 @@
             </p>
         </div>
 
-        <div class="col-12 col-md-4">
-            <h3>
+        <div class="col-12 col-md-4 p-2">
+            <h3 class="text-center">
                 Integreret skønhedssalon
             </h3>
 
@@ -75,55 +84,61 @@
 
     </div>
 
-    <div class="row bg-banner-color">
+    <div class="row bg-banner-color my-5">
 
-        <h2 class="text-center">
+        <h2 class="text-center my-4">
             Behandlinger til hele familien
         </h2>
 
-        <div class="col-12 col-md-4 p-0 py-4 pb-0 py-md-0 px-md-4">
-            <img class="img-fluid" src="images/Klipning.webp" alt="Et billed af en klipning"/>
 
-            <a href="#">
+        <div class="col-12 col-md-4 p-0 py-4 pb-0 py-md-0 px-md-4 btn-with-image">
+            <a href="behandlinger.php#Klipninger">
+            <img class="img-fluid btn-image shadow-sm" src="images/Klipning.webp" alt="Et billed af en klipning"/>
+                <h4 class="text-center">
                 Klipninger
+                </h4>
             </a>
 
         </div>
 
 
-        <div class="col-12 col-md-4 p-0 py-4 pb-0 py-md-0 px-md-4">
-            <img class="img-fluid" src="images/Farvning.webp" alt="Et billed af en farvning"/>
-
-            <a href="#">
-                Farvninger
+        <div class="col-12 col-md-4 p-0 py-4 pb-0 py-md-0 px-md-4 btn-with-image">
+            <a href="behandlinger.php#Farvning">
+                <img class="img-fluid btn-image shadow-sm" src="images/Farvning.webp" alt="Et billed af en farvning"/>
+                <h4 class="text-center">
+                    Farvninger
+                </h4>
             </a>
 
         </div>
 
-        <div class="col-12 col-md-4 p-0 py-4 py-md-0 px-md-4">
-            <img class="img-fluid" src="images/Kur_behandling.webp" alt="Et billed af en hårkur"/>
 
-            <a href="#">
-                Kur/Behandlinger
+        <div class="col-12 col-md-4 p-0 py-4 pb-0 py-md-0 px-md-4 btn-with-image">
+            <a href="behandlinger.php#KurBehandling">
+                <img class="img-fluid btn-image shadow-sm" src="images/Kur_behandling.webp" alt="Et billed af en hårkur"/>
+                <h4 class="text-center">
+                    Kur/Behandlinger
+                </h4>
             </a>
 
         </div>
 
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-8 offset-md-2 my-4 text-center">
 
-            <button type="button" class="btn btn-btn-color">Se ledige tider til behandling</button>
+            <a href="#" class="btn btn-btn-color" role="button">Se ledige tider til behandling</a>
 
         </div>
     </div>
 
 
-    <div>
+    <div id="Galleri">
         <h2 class="text-center">
             Galleri fra vores sociale medier
         </h2>
     </div>
 
-<?php include "includes/carousel.php";?>
+    <?php include "includes/carousel.php";?>
+</main>
 
 <?php include "includes/footer.php";?>
 

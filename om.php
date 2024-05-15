@@ -10,6 +10,7 @@
     <meta name="author" content="Udgiver">
     <meta name="copyright" content="Information om copyright">
 
+    <link rel="icon" type="image/x-icon" href="images/Favikon.webp">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,33 +23,91 @@
 
 <body>
 
-<?php include "includes/header.php";?>
+<div id="AboutUsBannerImage" class="banner-image-container">
+    <?php include "includes/header.php";?>
+    <img class="img-fluid" src="images/om_cover.webp" alt="Forside billede af en kunde">
+</div>
 
-    <div>
-        <img class="img-fluid" src="images/om_cover.webp" alt="Forside billede af en kunde">
-    </div>
+<main class="container-fluid">
 
-    <h2 class="text-center">
+    <h2 class="text-center my-5">
         Om Klippegården
     </h2>
+    <p>
 
-    <div class="row bg-banner-color mt-5">
-        <div class="col-12 col-md-6">
-            <img class="img-fluid" src="images/Profilbillede_Tasja.webp" alt="Et billed af frisør og salonindehaver, Tasja">
+    </p>
 
-        </div>
+    <h3 class="text-center my-5">
+        Mød os
+    </h3>
 
-        <div class="col-12 col-md-6 px-4 p-4">
-            <h2 class="text-center">Tasja</h2>
-            <h5 class="text-center">Frisør & indehaver af salonen</h5>
-            <p>
+    <div id="EmployeeBoxes">
+    <?php
+    $medarbejdere = array(
+        array(
+            'billede' => 'Profilbillede_Tasja.webp',
+            'billedbeskrivelse' => 'Et billed af frisør og salonindehaver, Tasja',
+            'navn' => 'Tasja',
+            'titel' => 'Frisør & indehaver af salonen',
+            'beskrivelse' => 'Tasja har været en del af Klippegården siden 2016, hvor hun 
+                              startede som kosmetolog. Hun begyndte på frisøruddannelsen i 
+                              2019 og blev færdiguddannet i februar 2023. Da hun var færdigudlært, 
+                              overtog hun salonen. Med sin kombinerede erfaring som kosmetolog 
+                              og frisør tilbyder Tasja en helhedsorienteret og luksuriøs salonoplevelse.'
+        ),
+        array(
+            'billede' => 'Profilbillede_Lena.webp',
+            'billedbeskrivelse' => 'Et billed af frisør, Lena',
+            'navn' => 'Lena',
+            'titel' => 'Frisør',
+            'beskrivelse' => 'Lena startede i lære hos Klippegården i 2007 og blev færdigudlært 
+                              fire år senere. Hun har været en fast del af salonen lige siden. 
+                              Lena er kendt for sin erfaring og dygtighed, og hun ha       r opbygget 
+                              en loyal kundebase gennem årene.'
+        ),
 
-            </p>
-        </div>
+        array(
+            'billede' => 'Profilbillede_Hannah.webp',
+            'billedbeskrivelse' => 'Et billed af frisør, Hannah',
+            'navn' => 'Hannah',
+            'titel' => 'Frisør',
+            'beskrivelse' => 'Hannah startede som elev hos Klippegården i juni 2021. 
+                              Hun gik til svendeprøve i april 2024 og bliver færdigudlært 
+                              i august 2024. Hannah er kendt for sin omhyggelige opmærksomhed 
+                              på detaljer og sit store engagement i kundernes tilfredshed.'
+        ),
+
+        array(
+            'billede' => 'Profilbillede_Sofie.webp',
+            'billedbeskrivelse' => 'Et billed af frisørelev, Sofie',
+            'navn' => 'Sofie',
+            'titel' => 'Frisørelev',
+            'beskrivelse' => 'Vores elev, Sofie, startede hos Klippegården i september 2023. 
+                              Til november 2025 skal hun til sin svendeprøve. Sofie lærer 
+                              de nyeste teknikker på skolen, hvilket giver hende mulighed for 
+                              at bringe moderne metoder ind i salonen.'
+        ),
+
+
+    );
+
+    foreach ($medarbejdere as $medarbejder) {
+        echo '<div class="row bg-banner-color mt-5 employee-box">';
+        echo '<div class="col-12 col-md-5 p-0 employee-image">';
+        echo '<img class="img-fluid" src="images/' . $medarbejder['billede'] . '" alt="' . $medarbejder['billedbeskrivelse'] . '">';
+        echo '</div>';
+        echo '<div class="col-12 col-md p-4">';
+        echo '<h2 class="text-center">' . $medarbejder['navn'] . '</h2>';
+        echo '<h5 class="text-center employee-title"><img class="curvey-line curvey-line--left" src="images/Curvey_line.svg" /> ' . $medarbejder['titel'] . '<img class="curvey-line curvey-line--right" src="images/Curvey_line.svg" /></h5>';
+        echo '<p class="employee-description">' . $medarbejder['beskrivelse'] . '</p>';
+        echo '<a href="#" class="btn btn-btn-color mt-3 employee-book-button" role="button">Book tid hos ' . $medarbejder['navn'] . '</a>';
+        echo '</div>';
+        echo '</div>';
+    }
+    ?>
+
     </div>
-
-
-
+</main>
 
 <?php include "includes/footer.php";?>
 

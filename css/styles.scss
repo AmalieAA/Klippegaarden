@@ -14,7 +14,7 @@ $custom-colors: (
 	"icon-color": #D9BF98,
 	"body-font-color": #23201D,
 	"background-color": #FAF9F6,
-	"banner-color": #F0E5D5,
+	"banner-color": #F4EFE5,
 	"btn-color": #E1D981
 );
 
@@ -29,6 +29,7 @@ $tablet: "screen and (min-width: 768px)";
 body{
 	font-family: "Lexend Deca";
 	font-size: 12px;
+	line-height: 1.8em;
 	color: var(--bs-body-font-color);
 	background-color: var(--bs-background-color);
 }
@@ -49,18 +50,73 @@ h1,h2,h3,h4,h5,h6{
 	height: auto;
 	margin-left: 10px;
 	@media #{$tablet}{
-		margin-left: 30px;
+		margin-left: 40px;
 		width: 150px;
 		height: auto;
 
 	}
 }
 
+.banner-image-container {
+	position: relative;
+	height: 100dvh;
+	overflow: clip;
+
+	&#ContactBannerImage{
+		height: 70dvh;
+		& img{
+			object-position: 25%;
+		}
+	}
+	&#AboutUsBannerImage {
+		height: 70dvh;
+	}
+
+	& nav {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 10;
+	}
+
+	& img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+	& .banner-image_text {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		padding: 1rem 2rem;
+
+		@media #{$tablet}{
+			padding: 3rem 4rem;
+		}
+
+		& h1 {
+			margin-bottom: 1rem;
+		}
+	}
+}
 
 .btn{
 	font-family: Gopher;
 }
 
+.btn-image{
+	opacity: 80%;
+}
+
+.btn-with-image {
+	transition: transform 0.3s ease;
+
+	&:hover{
+		transform: scale(1.1);
+		color: grey;
+	}
+
+}
 
 
 #FooterPic {
@@ -69,5 +125,122 @@ h1,h2,h3,h4,h5,h6{
 	background-position: center;
 	background-position-x: 75%;
 	background-repeat: no-repeat;
-	padding: 2rem;
+	padding: 2rem 2rem .5rem;
+}
+
+.copyright-icon{
+	font-size: 0.7em;
+	font-family: Gopher;
+}
+
+@media #{$tablet}{
+	#EmployeeBoxes .employee-box:nth-child(even) > div:first-child {
+		order: 2;
+	}
+}
+
+.employee-image img {
+	object-fit: cover;
+	height: 100%;
+}
+
+.employee-title {
+	border-bottom: 1px solid var(--bs-icon-color);
+	white-space: nowrap;
+	position: relative;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 16px;
+	min-width: 100px;
+
+	@media #{$tablet}{
+		font-size: 1.25rem;
+	}
+
+	& img.curvey-line {
+		height: 50px;
+		position: absolute;
+		top: -14px;
+
+		&.curvey-line--left {
+			left: -40.5px;
+		}
+		&.curvey-line--right {
+			transform: rotateZ(180deg) rotateX(180deg);
+			right: -40.5px;
+		}
+
+		@media #{$tablet}{
+			top: -9.5px;
+
+			&.curvey-line--left {
+				left: -40px;
+			}
+			&.curvey-line--right {
+				transform: rotateZ(180deg) rotateX(180deg);
+				right: -40px;
+			}
+		}
+	}
+}
+
+.employee-description {
+	max-width: 400px;
+	margin: 1rem auto;
+}
+
+.employee-book-button {
+	width: 100%;
+
+	@media #{$tablet}{
+		margin: auto;
+		width: fit-content;
+		display: block;
+	}
+}
+
+.treatment-title {
+	border-bottom: 1px solid var(--bs-icon-color);
+	white-space: nowrap;
+	position: relative;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 .5rem;
+	font-size: 1.75rem;
+
+	& img.curvey-line {
+		height: 50px;
+		position: absolute;
+		top: 0.5px;
+
+		&.curvey-line--left {
+			left: -40.5px;
+		}
+		&.curvey-line--right {
+			transform: rotateZ(180deg) rotateX(180deg);
+			right: -40.5px;
+		}
+
+		@media #{$tablet}{
+			top: 0px;
+
+			&.curvey-line--left {
+				left: -40.5px;
+			}
+			&.curvey-line--right {
+				transform: rotateZ(180deg) rotateX(180deg);
+				right: -40.5px;
+			}
+		}
+	}
+}
+
+.treatment-pris-note {
+	font-size: 0.75em;
+}
+
+#TreatmentBoxes > .treatment-box:nth-child(odd){
+	background-color: var(--bs-banner-color);
 }
