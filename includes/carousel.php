@@ -49,7 +49,7 @@
                     <img src="images/Grey_hair_instapost.webp" class="d-block img-fluid" alt="Et billede fra Klippegården Instagram">
                 </div>
                 <div class="col-4">
-                    <img src="images/Little_girl_instapost.webp" class="d-block img-fluid" alt="Et billede fra Klippegården Instagram">
+                    <img src="images/Shorthair_instapost.webp" class="d-block img-fluid" alt="Et billede fra Klippegården Instagram">
                 </div>
             </div>
         </div>
@@ -58,6 +58,12 @@
             <div class="row">
                 <div class="col-4">
                     <img src="images/Blond_hair_instapost.webp" class="d-block img-fluid" alt="Et billede fra Klippegården Instagram">
+                </div>
+                <div class="col-4">
+                    <img src="images/Brownhair_instapost.webp" class="d-block img-fluid" alt="Et billede fra Klippegården Instagram">
+                </div>
+                <div class="col-4">
+                    <img src="images/Little_girl_instapost.webp" class="d-block img-fluid" alt="Et billede fra Klippegården Instagram">
                 </div>
             </div>
         </div>

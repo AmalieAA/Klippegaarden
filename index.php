@@ -46,32 +46,39 @@
 
     <div class="row my-5">
 
-        <div class="col-12 col-md-4 p-2">
-            <h3 class="text-center">
+        <div class="col-12 col-md-4 p-2 text-center">
+            <img class="frontpage-icon" src="images/4_års_uddannelse.webp" alt="Ikon til afsnit om klippegårdens integerede skønhedssalon">
+
+            <h3>
                 4-årig uddannelse
             </h3>
 
-            <p>
+            <p class="text-left">
 
             </p>
         </div>
 
-        <div class="col-12 col-md-4 p-2">
-            <h3 class="text-center">
+        <div class="col-12 col-md-4 p-2 text-center">
+            <img class="frontpage-icon" src="images/afslappende_atmosfære.webp" alt="Ikon til afsnit om klippegårdens integerede skønhedssalon">
+
+            <h3>
                 Afslappende atmosfære
             </h3>
 
-            <p>
+            <p class="text-left">
 
             </p>
         </div>
 
-        <div class="col-12 col-md-4 p-2">
-            <h3 class="text-center">
+        <div class="col-12 col-md-4 p-2 text-center">
+            
+            <img class="frontpage-icon" src="images/skønhedssalon.webp" alt="Ikon til afsnit om klippegårdens integerede skønhedssalon">
+            
+            <h3>
                 Integreret skønhedssalon
             </h3>
 
-            <p>
+            <p class="text-start">
                 <a href="https://highbeauty.dk/">High Beauty</a>
                 , som er beliggende i vores salon,
                 tilbyder en bred vifte af skønhedsbehandlinger.
@@ -142,6 +149,6 @@
 
 <?php include "includes/footer.php";?>
 
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<?php include "includes/scripts.php";?>
 </body>
 </html>

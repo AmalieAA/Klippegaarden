@@ -26,7 +26,7 @@
 
 <div id="ContactBannerImage" class="banner-image-container" >
     <?php include "includes/header.php";?>
-    <img class="img-fluid" src="images/kontakt_cover.webp" alt="Kontakt coverbillede">
+    <img class="img-fluid" src="images/Kontakt_cover1.webp" alt="Kontakt coverbillede">
 </div>
 
 <main class="container-fluid">
@@ -88,30 +88,72 @@
             </span>
         </div>
     </div>
+</div>
 
 
-    <div class="row">
+    <div class="row mt-4">
 
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 bg-banner-color p-4 text-center">
 
-            <div class="row">
-                <div class="col-6">
+            <h3 class="py-2">Åbningstider</h3>
+            <div class="row py-2">
+                <div class="col-6">Mandag</div>
+                <div class="col-6">9-16</div>
+            </div>
+            <div class="row py-2">
+                <div class="col-6">Tirsdag</div>
+                <div class="col-6">9-17</div>
+            </div>
+            <div class="row py-2">
+                <div class="col-6">Onsdag</div>
+                <div class="col-6">9-19</div>
+            </div>
+            <div class="row py-2">
+                <div class="col-6">Torsdag</div>
+                <div class="col-6">9-19</div>
+            </div>
+            <div class="row py-2">
+                <div class="col-6">Fredag</div>
+                <div class="col-6">9-17</div>
+            </div>
+            <div class="row py-2">
+                <div class="col-6">Lørdag</div>
+                <div class="col-6">9-12</div>
+            </div>
+            <div class="row py-2">
+                <div class="col-6">Søndag</div>
+                <div class="col-6">Lukket</div>
+            </div>
+        </div>
 
-                </div>
+        <div class="col-12 col-md-6 bg-icon-color p-4">
+            <h3 class="py-2">Send os et spørgsmål</h3>
+            <div class="mb-3">
+                <label for="Navn" class="form-label fs-6">Navn</label>
+                <input type="text" class="form-control" id="Navn" placeholder="Skriv dit navn">
+            </div>
+            <div class="mb-3">
+                <label for="E-mail" class="form-label fs-6">E-mail</label>
+                <input type="text" class="form-control" id="E-mail" placeholder="Skriv din e-mail">
+            </div>
+            <div class="mb-3">
+                <label for="Emne" class="form-label fs-6">Emne</label>
+                <input type="text" class="form-control" id="Emne" placeholder="Angiv et emne">
+            </div>
+            <div class="mb-3">
+                <label for="Besked" class="form-label fs-6">Besked</label>
+                <input type="text" class="form-control" id="Besked" placeholder="Stil dit spørgsmål">
+            </div>
+            <div class="col-12 col-md-8 offset-md-2 text-center">
+                <a href="#" class="btn btn-btn-color" role="button">Send</a>
 
             </div>
-
         </div>
-
-        <div class="col-12 col-md-6">
-
-        </div>
-
     </div>
 
 
 
-    <h2 class="text-center">
+    <h2 class="text-center my-4">
         Afbudsregler & Gavekort
     </h2>
 
@@ -119,6 +161,6 @@
 
 <?php include "includes/footer.php";?>
 
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<?php include "includes/scripts.php";?>
 </body>
 </html>

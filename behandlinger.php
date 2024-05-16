@@ -26,7 +26,7 @@
 
 <div id="ContactBannerImage" class="banner-image-container">
     <?php include "includes/header.php";?>
-    <img class="img-fluid" src="images/Stemnings_billede.webp" alt="Behandslingsside coverbillede">
+    <img class="img-fluid" src="images/Stemnings_billede1.webp" alt="Behandslingsside coverbillede">
 </div>
 
 <main class="container-fluid">
@@ -435,6 +435,6 @@
 </main>
 <?php include "includes/footer.php";?>
 
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<?php include "includes/scripts.php";?>
 </body>
 </html>

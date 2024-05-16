@@ -62,7 +62,7 @@
             'titel' => 'Frisør',
             'beskrivelse' => 'Lena startede i lære hos Klippegården i 2007 og blev færdigudlært 
                               fire år senere. Hun har været en fast del af salonen lige siden. 
-                              Lena er kendt for sin erfaring og dygtighed, og hun ha       r opbygget 
+                              Lena er kendt for sin erfaring og dygtighed, og hun har opbygget 
                               en loyal kundebase gennem årene.'
         ),
 
@@ -96,10 +96,10 @@
         echo '<div class="col-12 col-md-5 p-0 employee-image">';
         echo '<img class="img-fluid" src="images/' . $medarbejder['billede'] . '" alt="' . $medarbejder['billedbeskrivelse'] . '">';
         echo '</div>';
-        echo '<div class="col-12 col-md p-4">';
+        echo '<div class="col-12 col-md p-4 d-flex flex-column">';
         echo '<h2 class="text-center">' . $medarbejder['navn'] . '</h2>';
         echo '<h5 class="text-center employee-title"><img class="curvey-line curvey-line--left" src="images/Curvey_line.svg" /> ' . $medarbejder['titel'] . '<img class="curvey-line curvey-line--right" src="images/Curvey_line.svg" /></h5>';
-        echo '<p class="employee-description">' . $medarbejder['beskrivelse'] . '</p>';
+        echo '<p class="employee-description flex-grow-1">' . $medarbejder['beskrivelse'] . '</p>';
         echo '<a href="#" class="btn btn-btn-color mt-3 employee-book-button" role="button">Book tid hos ' . $medarbejder['navn'] . '</a>';
         echo '</div>';
         echo '</div>';
@@ -111,6 +111,6 @@
 
 <?php include "includes/footer.php";?>
 
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<?php include "includes/scripts.php";?>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<nav role="navigation" class="navbar navbar-expand-lg">
+<nav id="MainNav" role="navigation" class="navbar navbar-expand-lg">
     <div class="container-fluid align-items-end">
         <a class="navbar-brand" href="index.php">
             <img src="images/Klippegården_Logo.webp" alt="Klippegårdens logo" id="Logo">

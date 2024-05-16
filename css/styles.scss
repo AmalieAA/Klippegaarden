@@ -39,6 +39,23 @@ h1,h2,h3,h4,h5,h6{
 	color: var(--bs-body-font-color);
 }
 
+#MainNav {
+	&:has(.navbar-collapse:is(.collapse.show, .collapsing)) {
+		background-color: var(--bs-background-color);
+	}
+
+	&.nav-fixed {
+		transition: top .3s;
+		top: -100%;
+		position: fixed;
+		background-color: var(--bs-background-color);
+	}
+	&.nav-shown {
+		 top: 0%;
+	}
+}
+
+
 #navbarNavDropdown li{
 	font-family: Gopher;
 	font-size: 1rem;
@@ -74,7 +91,7 @@ h1,h2,h3,h4,h5,h6{
 
 	& nav {
 		position: absolute;
-		top: 0;
+		/*top: 0;*/
 		width: 100%;
 		z-index: 10;
 	}
@@ -102,6 +119,7 @@ h1,h2,h3,h4,h5,h6{
 
 .btn{
 	font-family: Gopher;
+	padding-inline: 50px;
 }
 
 .btn-image{
@@ -243,4 +261,13 @@ h1,h2,h3,h4,h5,h6{
 
 #TreatmentBoxes > .treatment-box:nth-child(odd){
 	background-color: var(--bs-banner-color);
+}
+
+input.form-control{
+	font-size: 12px;
+}
+
+.frontpage-icon{
+	height: 300px;
+	width: auto;
 }
