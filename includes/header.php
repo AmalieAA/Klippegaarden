@@ -1,11 +1,11 @@
 <nav id="MainNav" role="navigation" class="navbar navbar-expand-lg">
-    <div class="container-fluid align-items-end">
+    <div class="container-fluid container-xxl align-items-end">
         <a class="navbar-brand" href="index.php">
-            <img src="images/Klippegården_Logo.webp" alt="Klippegårdens logo" id="Logo">
+            <img src="images/Klippegården_logo.webp" alt="Klippegårdens logo" id="Logo">
 
 
         </a>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler align-self-center border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -39,7 +39,7 @@
                         echo '<li><a class="dropdown-item" href="behandlinger.php#Klipninger">Klipninger</a></li>';
                         echo '<li><a class="dropdown-item" href="behandlinger.php#Farvning">Farvninger</a></li>';
                         echo '<li><a class="dropdown-item" href="behandlinger.php#Permanent">Permanent</a></li>';
-                        echo '<li><a class="dropdown-item" href="behandlinger.php#KurBehandling">Kur/Behandlinger</a></li>';
+                        echo '<li><a class="dropdown-item" href="behandlinger.php#KurBehandlinger">Kur/Behandlinger</a></li>';
                         echo '<li><a class="dropdown-item" href="behandlinger.php#Håropsætning">Håropsætning</a></li>';
                         echo '<li><a class="dropdown-item" href="behandlinger.php#BrynVipper">Bryn & Vipper</a></li>';
 

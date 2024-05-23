@@ -5,6 +5,10 @@
     <meta charset="utf-8">
 
     <title>Forside</title>
+    <meta name="description" content="Oplev førsteklasses hår- og skønhedsbehandlinger i en
+                                      afslappende atmosfære hos Klippegården i Slagelse.
+                                      Book din tid nu og lad vores erfarne team tage sig af dig!">
+    <meta name="keywords" content="Skønhedsbehandlinger, Salon">
 
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
@@ -28,16 +32,27 @@
     <img class="img-fluid" src="images/om_cover.webp" alt="Forside billede af en kunde">
 </div>
 
-<main class="container-fluid">
+<main class="container-fluid container-xxl">
 
-    <h2 class="text-center my-5">
+    <h2 class="text-center mt-5 mb-3">
         Om Klippegården
     </h2>
-    <p>
+    <div class="row">
+        <p class="text-start col-12 px-4 col-md-8 offset-md-2">
+            Klippegården har været en del af Slagelse siden 1991, hvor den blev åbnet af Diana i Langes Gård. I 2015 flyttede
+            salonen til de mere rummelige og lyse lokaler på Nytorv 8B. Her har vi også udvidet med et behandlerrum, hvor
+            High Beauty tilbyder forskellige skønhedsbehandlinger.
+            <br>
+            <br>
+            Den 1. februar 2023 overtog Tasja ejerskabet af salonen og driver nu både Klippegården og
+            <a class="link-body-font-color border-bottom border-body-font-color" href="https://highbeauty.dk/"> High Beauty</a>.
+            Vi fortsætter med at levere førsteklasses service og behandlinger til vores kunder i hjertet af Slagelse.
+            Vores salon er kendt for sin dejlige, afslappende atmosfære, hvor kunderne altid føler sig velkomne og forkælede.
 
-    </p>
+        </p>
+    </div>
 
-    <h3 class="text-center my-5">
+    <h3 class="text-center mt-5">
         Mød os
     </h3>
 
@@ -98,7 +113,7 @@
         echo '</div>';
         echo '<div class="col-12 col-md p-4 d-flex flex-column">';
         echo '<h2 class="text-center">' . $medarbejder['navn'] . '</h2>';
-        echo '<h5 class="text-center employee-title"><img class="curvey-line curvey-line--left" src="images/Curvey_line.svg" /> ' . $medarbejder['titel'] . '<img class="curvey-line curvey-line--right" src="images/Curvey_line.svg" /></h5>';
+        echo '<h5 class="text-center employee-title"><img class="curvey-line curvey-line--left" src="images/Curvey_line.svg" alt="Linje"/> ' . $medarbejder['titel'] . '<img class="curvey-line curvey-line--right" src="images/Curvey_line.svg" /></h5>';
         echo '<p class="employee-description flex-grow-1">' . $medarbejder['beskrivelse'] . '</p>';
         echo '<a href="#" class="btn btn-btn-color mt-3 employee-book-button" role="button">Book tid hos ' . $medarbejder['navn'] . '</a>';
         echo '</div>';

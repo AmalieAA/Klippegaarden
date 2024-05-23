@@ -5,6 +5,11 @@
     <meta charset="utf-8">
 
     <title>Forside</title>
+    <meta name="description" content="Oplev professionelle hårbehandlinger og skønhedspleje
+                                      i hyggelige omgivelser hos Klippegården i Slagelse.
+                                      Vi bruger førsteklasses produkter fra Paul Mitchell og Olaplex.
+                                      Book din tid nu!">
+    <meta name="keywords" content="Paul Mitchell, Hår">
 
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
@@ -27,9 +32,19 @@
 <div id="ContactBannerImage" class="banner-image-container">
     <?php include "includes/header.php";?>
     <img class="img-fluid" src="images/Stemnings_billede1.webp" alt="Behandslingsside coverbillede">
+    <div class="banner-image_text">
+        <h1>
+            Vi tilbyder professionelle
+            <br>
+            behandlinger, hvor du er
+            <br>
+            i centrum
+        </h1>
+    </div>
 </div>
 
-<main class="container-fluid">
+
+<main class="container-fluid container-xxl">
 
     <h2 class="text-center my-5">
         Vores behandlinger
@@ -102,6 +117,19 @@
                         )
                     )
                 ),
+
+                array(
+                    'GruppeNavn' => 'Stilleklipning',
+                    'GruppeNavnElement' => 'h5',
+                    'Priser' => array(
+
+                        array(
+                            'navn' => 'Du har mulighed for at booke en stilleklip <br/>
+                                       gennem vores bookingsystem.',
+                            'pris' => null
+                        ),
+                    )
+                )
             ),
         ),
         // Farvninger
@@ -211,6 +239,19 @@
                     )
                 ),
 
+                array(
+                    'GruppeNavn' => 'Tillæg',
+                    'GruppeNavnElement' => 'h5',
+                    'Priser' => array(
+
+                        array(
+                            'navn' => 'Der kan komme et tillæg på prisen
+                            afhængig <br/> af hårets længde og tykkelse.
+                            Listepriserne <br/> er for et kort normalt hår.',
+                            'pris' => null
+                        ),
+                    )
+                )
             ),
         ),
         // Permanent
@@ -242,6 +283,20 @@
                             'navn' => 'Permanent top uden klip',
                             'pris' => 750
                         )
+                    )
+                ),
+
+                array(
+                    'GruppeNavn' => 'Tillæg',
+                    'GruppeNavnElement' => 'h5',
+                    'Priser' => array(
+
+                        array(
+                            'navn' => 'Der kan komme et tillæg på prisen
+                            afhængig <br/> af hårets længde og tykkelse.
+                            Listepriserne <br/> er for et kort normalt hår.',
+                            'pris' => null
+                        ),
                     )
                 )
             ),
@@ -397,18 +452,24 @@
 
     foreach ($Behandlinger as $Behandling) {
 
-        echo '<div id="' . $Behandling["Id"] . '"  class="row mt-5 treatment-box p-3 p-md-5">';
+        echo '<div class="row mt-5 treatment-box p-3 p-md-5">';
+        echo '<span id="' . $Behandling["Id"] . '" class="col-12 anker"></span>';
         echo '<div class="col-12">';
         echo '<h2 class="text-center treatment-title">';
-        echo '<img class="curvey-line curvey-line--left" src="images/Curvey_line.svg" />';
+        echo '<img class="curvey-line curvey-line--left" src="images/Curvey_line.svg" alt="Linje"/>';
         echo $Behandling["Titel"];
-        echo '<img class="curvey-line curvey-line--right" src="images/Curvey_line.svg" />';
+        echo '<img class="curvey-line curvey-line--right" src="images/Curvey_line.svg" alt="Linje" />';
         echo '</h2>';
         echo '</div>';
         foreach ($Behandling["PrisGrupper"] as $prisGruppe) {
             echo '<div class="col-12 col-md-6 my-3">';
             if(!empty($prisGruppe["GruppeNavn"])) {
-                echo '<h3>' . $prisGruppe["GruppeNavn"] . '</h3>';
+                if(!empty($prisGruppe["GruppeNavnElement"])) {
+                    echo '<' . $prisGruppe["GruppeNavnElement"] . '>' . $prisGruppe["GruppeNavn"] . '</' . $prisGruppe["GruppeNavnElement"] . '>';
+                }
+                else {
+                    echo '<h3>' . $prisGruppe["GruppeNavn"] . '</h3>';
+                }
             }
             foreach ($prisGruppe["Priser"] as $pris) {
                 echo '<div class="row">';
@@ -418,7 +479,9 @@
                     echo '<span class="treatment-pris-note ms-1">' . $pris["note"] . '</span>';
                 }
                 echo '</div>';
-                echo '<div class="col-auto d-flex align-items-end">..........Kr.' . $pris["pris"] . ',-</div>';
+                if(!empty($pris["pris"])) {
+                    echo '<div class="col-auto d-flex align-items-end">..........Kr.' . $pris["pris"] . ',-</div>';
+                }
                 echo '</div>';
             }
             echo '</div>';
@@ -428,10 +491,33 @@
     }
     ?>
 </div>
-
-    <h2 class="text-center">
-        Produkter i salonen
-    </h2>
+    <div class="row mt-5 mt-md-0">
+        <div class="col-6 offset-3 border-top border-2 border-banner-color"></div>
+    </div>
+    <div class="row my-5">
+        <h2 class="text-center col-12 mb-3">
+            Produkter i salonen
+        </h2>
+        <div class="col-12 px-4 col-md-8 offset-md-2">
+            <p class="text-start">
+                Hos Klippegården bruger vi kun de bedste produkter for at sikre optimal pleje for dit hår og din hud. Vi har
+                nøje udvalgt vores produkter fra nogle af de mest anerkendte leverandører i branchen. Vi har produkter til
+                alle hårtyper, så tøv ikke med at kigge forbi – vi står klar til at vejlede og hjælpe dig!
+            </p>
+            <h6>Paul Mitchell</h6>
+            <p>
+                <a class="link-body-font-color border-bottom border-body-font-color" href="https://www.paulmitchell.dk/om-paul-mitchell.html">Paul Mitchell</a>
+                produkter giver glansfuldt hår og god samvittighed. De er CO2-neutrale og støtter velgørende
+                formål. Paul Mitchell tilbyder over 100 luksus hårprodukter, der kombinerer høj kvalitet med den nyeste
+                teknologi. De anvender naturlige, vandopløselige ingredienser og tester aldrig på dyr.
+            </p>
+            <h6>Olaplex</h6>
+            <p>
+                <a class="link-body-font-color border-bottom border-body-font-color" href="https://olaplex.dk/">Olaplex</a>
+                reparerer ødelagte og brudte svovlbindinger i håret, hvilket styrker og beskytter mod fremtidig skade.
+            </p>
+        </div>
+    </div>
 </main>
 <?php include "includes/footer.php";?>
 

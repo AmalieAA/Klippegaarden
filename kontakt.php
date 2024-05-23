@@ -5,6 +5,10 @@
     <meta charset="utf-8">
 
     <title>Kontakt</title>
+    <meta name="description" content="Kontakt Klippegården i Slagelse for professionelle hårbehandlinger
+                                      og skønhedspleje. Find vores kontaktinformationer, læs om afbudsregler,
+                                      og køb gavekort til eksklusive behandlinger.
+                                      Brug vores kontaktformular for nem adgang.">
 
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
@@ -29,66 +33,66 @@
     <img class="img-fluid" src="images/Kontakt_cover1.webp" alt="Kontakt coverbillede">
 </div>
 
-<main class="container-fluid">
+<main class="container-fluid container-xxl">
 
 
     <h2 class="text-center my-5">
         Kontakt os på
     </h2>
 
-<div class="row">
+    <div class="row">
 
-    <div class="col-12 col-md bg-banner-color text-center p-2 m-md-4">
-        <div class="fs-2 pb-2">
-            <i class="fa-solid fa-phone text-icon-color"></i>
+        <div class="col-12 col-md bg-banner-color text-center p-2 m-md-4">
+            <div class="fs-2 pb-2">
+                <i class="fa-solid fa-phone text-icon-color"></i>
 
+            </div>
+            <div>
+                <h5>
+                    Ring til os på
+                </h5>
+            </div>
+            <div>
+                <a class="text-body-font-color" href="tel:58501420">
+                    58501420
+                </a>
+            </div>
         </div>
-        <div>
-            <h5>
-                Ring til os på
-            </h5>
+
+        <div class="col-12 col-md bg-banner-color text-center p-2 my-4 m-md-4">
+            <div class="fs-2 pb-2">
+                <i class="fa-solid fa-envelope text-icon-color"></i>
+
+            </div>
+            <div>
+                <h5>
+                    Send en mail på
+                </h5>
+            </div>
+            <div>
+                <a class="text-body-font-color" href="mailto:tasja@klippegaarden.dk">
+                    tasja@klippegaarden.dk
+
+                </a>
+            </div>
         </div>
-        <div>
-            <a class="text-body-font-color" href="tel:58501420">
-                58501420
-            </a>
+
+        <div class="col-12 col-md bg-banner-color text-center p-2 m-md-4">
+            <div class="fs-2 pb-2">
+                <i class="fa-solid fa-location-dot text-icon-color" ></i>
+            </div>
+            <div>
+                <h5>
+                    Find os på
+                </h5>
+            </div>
+            <div>
+                <span class="text-body-font-color">
+                    Nytorv 8B, 4200 Slagelse
+                </span>
+            </div>
         </div>
     </div>
-
-    <div class="col-12 col-md bg-banner-color text-center p-2 my-4 m-md-4">
-        <div class="fs-2 pb-2">
-            <i class="fa-solid fa-envelope text-icon-color"></i>
-
-        </div>
-        <div>
-            <h5>
-                Send en mail på
-            </h5>
-        </div>
-        <div>
-            <a class="text-body-font-color" href="mailto:tasja@klippegaarden.dk">
-                tasja@klippegaarden.dk
-
-            </a>
-        </div>
-    </div>
-
-    <div class="col-12 col-md bg-banner-color text-center p-2 m-md-4">
-        <div class="fs-2 pb-2">
-            <i class="fa-solid fa-location-dot text-icon-color" ></i>
-        </div>
-        <div>
-            <h5>
-                Find os på
-            </h5>
-        </div>
-        <div>
-            <span class="text-body-font-color">
-                Nytorv 8B, 4200 Slagelse
-            </span>
-        </div>
-    </div>
-</div>
 
 
     <div class="row mt-4">
@@ -134,7 +138,7 @@
             </div>
             <div class="mb-3">
                 <label for="E-mail" class="form-label fs-6">E-mail</label>
-                <input type="text" class="form-control" id="E-mail" placeholder="Skriv din e-mail">
+                <input type="email" class="form-control" id="E-mail" placeholder="Skriv din e-mail">
             </div>
             <div class="mb-3">
                 <label for="Emne" class="form-label fs-6">Emne</label>
@@ -153,9 +157,27 @@
 
 
 
-    <h2 class="text-center my-4">
-        Afbudsregler & Gavekort
-    </h2>
+    <div class="row my-5">
+        <h2 class="text-center col-12">
+            Afbudsregler & Gavekort
+        </h2>
+        <div class="col-12 px-4 col-md-8 offset-md-2">
+            <h6>Afbudsregler</h6>
+            <p>
+                Hvis du er forhindret i at komme til din aftalte tid hos Klippegården, bedes du melde afbud telefonisk,
+                helst dagen før. Har du spørgsmål om din tid, er du altid velkommen til at ringe eller kigge ind i salonen
+                <br>
+                – vi har altid kaffe på kanden.
+
+            </p>
+            <h6>Gavekort</h6>
+            <p>
+                Forkæl en du holder af med et gavekort til Klippegården. Vores gavekort kan bruges til eksklusive
+                behandlinger eller produkter og er den perfekte gave til enhver anledning.
+
+            </p>
+        </div>
+    </div>
 
 </main>
 
