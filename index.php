@@ -41,7 +41,7 @@
         </div>
     </div>
 
-<main class="container-fluid container-xxl">
+<main role="main" class="container-fluid container-xxl">
 
     <div class="my-5">
         <h2 class="text-center">
@@ -52,9 +52,10 @@
     <div class="row pb-5">
 
         <div class="col-12 col-md-6 col-lg-4 p-2 text-center">
-            <img class="frontpage-icon" src="images/4_års_uddannelse.webp" alt="Ikon til afsnit om klippegårdens uddannelsesniveau">
+            <img class="frontpage-icon" src="images/4_års_uddannelse.webp"
+                 alt="Ikon til afsnit om klippegårdens uddannelsesniveau">
 
-            <h3>
+            <h3 class="text-start px-4">
                 4-årig uddannelse
             </h3>
 
@@ -69,7 +70,7 @@
         <div class="col-12 col-md-6 col-lg-4 p-2 text-center">
             <img class="frontpage-icon" src="images/afslappende_atmosfære.webp" alt="Ikon til afsnit om klippegårdens atmosfære i salonen">
 
-            <h3>
+            <h3 class="text-start px-4">
                 Afslappende atmosfære
             </h3>
 
@@ -86,7 +87,7 @@
             
             <img class="frontpage-icon" src="images/skønhedssalon.webp" alt="Ikon til afsnit om klippegårdens integerede skønhedssalon">
             
-            <h3>
+            <h3 class="text-start px-4">
                 Integreret skønhedssalon
             </h3>
 
@@ -135,7 +136,7 @@
 
 
         <div class="col-12 col-md-4 p-0 py-4 pb-0 py-md-0 px-md-4 btn-with-image">
-            <a href="behandlinger.php#KurBehandling">
+            <a href="behandlinger.php#KurBehandlinger">
                 <img class="img-fluid btn-image shadow-sm" src="images/Kur_behandling.webp" alt="Et billed af en hårkur"/>
                 <h4 class="text-center pt-2">
                     Kur/Behandlinger

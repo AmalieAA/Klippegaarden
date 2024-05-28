@@ -29,7 +29,7 @@ $tablet: "screen and (min-width: 768px)";
 
 body{
 	font-family: "Lexend Deca";
-	font-size: 12px;
+	font-size: 16px;
 	line-height: 1.8em;
 	color: var(--bs-body-font-color);
 	background-color: var(--bs-background-color);
@@ -168,6 +168,11 @@ h1,h2,h3,h4,h5,h6{
 
 .employee-image img {
 	object-fit: cover;
+	height: 100%;
+	max-height: 350px;
+	@media #{$tablet} {
+		max-height: unset;
+	}
 }
 
 .employee-title {

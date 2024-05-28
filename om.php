@@ -32,7 +32,7 @@
     <img class="img-fluid" src="images/om_cover.webp" alt="Forside billede af en kunde">
 </div>
 
-<main class="container-fluid container-xxl">
+<main role="main" class="container-fluid container-xxl">
 
     <h2 class="text-center mt-5 mb-3">
         Om Klippegården

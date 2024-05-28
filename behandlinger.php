@@ -31,7 +31,7 @@
 
 <div id="ContactBannerImage" class="banner-image-container">
     <?php include "includes/header.php";?>
-    <img class="img-fluid" src="images/Stemnings_billede1.webp" alt="Behandslingsside coverbillede">
+    <img class="img-fluid" src="images/Stemnings_billede.webp" alt="Behandslingsside coverbillede">
     <div class="banner-image_text">
         <h1>
             Vi tilbyder professionelle
@@ -44,7 +44,7 @@
 </div>
 
 
-<main class="container-fluid container-xxl">
+<main role="main" class="container-fluid container-xxl">
 
     <h2 class="text-center my-5">
         Vores behandlinger
@@ -64,7 +64,7 @@
                     'Priser' => array(
                         array(
                             'navn' => 'Dameklip & let føn',
-                            'pris' => 425
+                            'pris' => 445
                         ),
                         array(
                             'navn' => 'Dameklip, vask & let føn',
@@ -504,14 +504,14 @@
                 nøje udvalgt vores produkter fra nogle af de mest anerkendte leverandører i branchen. Vi har produkter til
                 alle hårtyper, så tøv ikke med at kigge forbi – vi står klar til at vejlede og hjælpe dig!
             </p>
-            <h6>Paul Mitchell</h6>
+            <h5>Paul Mitchell</h5>
             <p>
                 <a class="link-body-font-color border-bottom border-body-font-color" href="https://www.paulmitchell.dk/om-paul-mitchell.html">Paul Mitchell</a>
                 produkter giver glansfuldt hår og god samvittighed. De er CO2-neutrale og støtter velgørende
                 formål. Paul Mitchell tilbyder over 100 luksus hårprodukter, der kombinerer høj kvalitet med den nyeste
                 teknologi. De anvender naturlige, vandopløselige ingredienser og tester aldrig på dyr.
             </p>
-            <h6>Olaplex</h6>
+            <h5>Olaplex</h5>
             <p>
                 <a class="link-body-font-color border-bottom border-body-font-color" href="https://olaplex.dk/">Olaplex</a>
                 reparerer ødelagte og brudte svovlbindinger i håret, hvilket styrker og beskytter mod fremtidig skade.
